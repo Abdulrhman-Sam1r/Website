@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>WanderNile - Your Travel Adventure Awaits</title>
+    <!-- Include common head content -->
+    <!-- #include file="head.html" -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="WanderNile - Experience the magic of Egypt with our carefully crafted travel experiences">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0e7490',
+                        secondary: '#0369a1',
+                    }
+                },
+                fontFamily: {
+                    sans: ['Poppins', 'sans-serif'],
+                }
+            }
+        }
+    </script>
+
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <!-- #include file="header.html" -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">Wander<span>Nile</span></a>
+                <button class="nav-toggle">&#9776;</button>
+                <nav class="navbar">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="tours.html">Tours</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section relative h-screen flex items-center justify-center bg-cover bg-center"
+            style="background-image: url('https://images.unsplash.com/photo-1568322445389-f64ac2515020?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1500&q=80');">
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div class="container relative z-10 text-center text-white px-4">
+                <h1 class="text-5xl md:text-6xl font-bold mb-4" data-aos="fade-down" data-aos-duration="1000">Discover
+                    Egypt With Us</h1>
+                <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="200">Experience the magic of ancient wonders and modern adventures along the Nile
+                </p>
+                <a href="tours.html"
+                    class="btn btn-primary text-white font-bold py-3 px-8 rounded-full transition duration-300 inline-block"
+                    data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">Explore Tours</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+                    <h2 class="section-title">About WanderNile</h2>
+                    <div class="section-divider"></div>
+                    <p class="text-lg text-gray-600 mb-6">
+                        WanderNile is your premier gateway to experiencing the wonders of Egypt. Founded by passionate
+                        travelers with a deep love for Egyptian culture and history, we specialize in creating
+                        unforgettable journeys that combine iconic landmarks with authentic local experiences.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Our expert guides and carefully crafted itineraries ensure that every moment of your adventure
+                        is filled with discovery, comfort, and the magic that makes Egypt one of the world's most
+                        captivating destinations.
+                    </p>
+                    <a href="contact.html"
+                        class="text-primary hover:text-secondary font-semibold inline-flex items-center transition duration-300">
+                        Learn More About Us <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Tours -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="section-title text-center" data-aos="fade-up">Featured Tours</h2>
+                <div class="section-divider"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                    <!-- Tour Card 1 -->
+                    <div class="card transition-transform duration-300 hover:transform hover:scale-105"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://images.unsplash.com/photo-1568322445389-f64ac2515020?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                            alt="Pyramids of Giza" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="bg-primary text-white text-sm py-1 px-3 rounded-full">5 Days</span>
+                                <span class="text-gray-600"><i class="fas fa-star text-yellow-400"></i> 4.9 (128)</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">Pyramids & Nile Cruise</h3>
+                            <p class="text-gray-600 mb-4">Explore the ancient pyramids and cruise along the legendary
+                                Nile River in this unforgettable journey through time.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-primary font-bold text-xl">$1,299</span>
+                                <a href="tours.html"
+                                    class="btn btn-primary py-2 px-4 rounded transition duration-300">View
+                                    Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tour Card 2 -->
+                    <div class="card transition-transform duration-300 hover:transform hover:scale-105"
+                        data-aos="fade-up" data-aos-delay="200">
+                        <img src="https://images.unsplash.com/photo-1553913861-c0fddf2619ee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                            alt="Luxor Temple" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="bg-primary text-white text-sm py-1 px-3 rounded-full">7 Days</span>
+                                <span class="text-gray-600"><i class="fas fa-star text-yellow-400"></i> 4.8 (96)</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">Luxor & Valley of Kings</h3>
+                            <p class="text-gray-600 mb-4">Discover the ancient city of Luxor and the mysterious Valley
+                                of Kings with expert guides and luxury accommodations.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-primary font-bold text-xl">$1,799</span>
+                                <a href="tours.html"
+                                    class="btn btn-primary py-2 px-4 rounded transition duration-300">View
+                                    Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tour Card 3 -->
+                    <div class="card transition-transform duration-300 hover:transform hover:scale-105"
+                        data-aos="fade-up" data-aos-delay="300">
+                        <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                            alt="Red Sea" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="bg-primary text-white text-sm py-1 px-3 rounded-full">4 Days</span>
+                                <span class="text-gray-600"><i class="fas fa-star text-yellow-400"></i> 4.7 (84)</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">Red Sea Retreat</h3>
+                            <p class="text-gray-600 mb-4">Relax on pristine beaches and dive into crystal clear waters
+                                to explore vibrant coral reefs in this coastal paradise.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-primary font-bold text-xl">$899</span>
+                                <a href="tours.html"
+                                    class="btn btn-primary py-2 px-4 rounded transition duration-300">View
+                                    Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <a href="tours.html"
+                        class="btn btn-primary font-bold py-3 px-8 rounded-full transition duration-300 inline-block"
+                        data-aos="zoom-in">View All Tours</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="section-title text-center" data-aos="fade-up">Traveler Testimonials</h2>
+                <div class="section-divider"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                    <!-- Testimonial 1 -->
+                    <div class="card p-8" data-aos="fade-up" data-aos-delay="100">
+                        <div class="text-yellow-400 flex mb-4">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 italic mb-6">"Our trip to Egypt with WanderNile exceeded all
+                            expectations. The guides were knowledgeable and passionate, and the itinerary perfectly
+                            balanced iconic sites with hidden gems. Truly a life-changing experience!"</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full bg-gray-300 mr-4 overflow-hidden">
+                                <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sarah Johnson"
+                                    class="w-full h-full object-cover" loading="lazy">
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Sarah Johnson</h4>
+                                <p class="text-gray-500 text-sm">New York, USA</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="card p-8" data-aos="fade-up" data-aos-delay="200">
+                        <div class="text-yellow-400 flex mb-4">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 italic mb-6">"The Nile cruise was absolutely magical. Watching the
+                            sunset over ancient temples while sailing on the legendary river was unforgettable.
+                            WanderNile's attention to detail made our honeymoon perfect in every way."</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full bg-gray-300 mr-4 overflow-hidden">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="David & Emma Chen"
+                                    class="w-full h-full object-cover" loading="lazy">
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">David & Emma Chen</h4>
+                                <p class="text-gray-500 text-sm">Toronto, Canada</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="card p-8" data-aos="fade-up" data-aos-delay="300">
+                        <div class="text-yellow-400 flex mb-4">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 italic mb-6">"As a solo traveler, I felt completely safe and welcomed
+                            throughout my journey with WanderNile. The small group size allowed for personalized
+                            experiences, and I made friends from around the world. Can't wait to return!"</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full bg-gray-300 mr-4 overflow-hidden">
+                                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Maria Rodriguez"
+                                    class="w-full h-full object-cover" loading="lazy">
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Maria Rodriguez</h4>
+                                <p class="text-gray-500 text-sm">Barcelona, Spain</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <!-- #include file="footer.html" -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>WanderNile &copy; 2025</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="contact-info">
+                    <a href="mailto:info@wandernile.com"><i class="fas fa-envelope"></i> info@wandernile.com</a>
+                    <span> | </span>
+                    <a href="https://wa.me/1234567890"><i class="fab fa-whatsapp"></i> +1 (234) 567-890</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Common Scripts -->
+    <!-- #include file="scripts.html" -->
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+    </script>
+
+    <!-- Main Script -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

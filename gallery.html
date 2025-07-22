@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - WanderNile</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0e7490',
+                        secondary: '#0369a1',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Gallery specific styles */
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(14, 116, 144, 0.85);
+            overflow: hidden;
+            width: 100%;
+            height: 0;
+            transition: .5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            height: 100%;
+        }
+
+        .gallery-item img {
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-filter button.active {
+            background-color: #0e7490;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">Wander<span>Nile</span></a>
+                <button class="nav-toggle">&#9776;</button>
+                <nav class="navbar">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="tours.html">Tours</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Gallery Header -->
+        <section class="relative py-20 bg-cover bg-center text-white"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1600096194534-95cf5ece04cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4" data-aos="fade-down">Travel Gallery</h1>
+                <p class="text-xl max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    Experience the beauty and wonder of Egypt through our stunning collection of travel photographs
+                </p>
+            </div>
+        </section>
+
+        <!-- Gallery Filter -->
+        <section class="py-8 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap justify-center gap-4 gallery-filter">
+                    <button
+                        class="filter-btn active bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition duration-300"
+                        data-filter="all">All</button>
+                    <button
+                        class="filter-btn bg-white text-gray-700 px-6 py-2 rounded-full hover:bg-gray-200 transition duration-300"
+                        data-filter="landmarks">Landmarks</button>
+                    <button
+                        class="filter-btn bg-white text-gray-700 px-6 py-2 rounded-full hover:bg-gray-200 transition duration-300"
+                        data-filter="culture">Culture</button>
+                    <button
+                        class="filter-btn bg-white text-gray-700 px-6 py-2 rounded-full hover:bg-gray-200 transition duration-300"
+                        data-filter="nature">Nature</button>
+                    <button
+                        class="filter-btn bg-white text-gray-700 px-6 py-2 rounded-full hover:bg-gray-200 transition duration-300"
+                        data-filter="adventure">Adventure</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Grid -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <!-- Gallery Item 1 -->
+                    <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-aos="fade-up"
+                        data-category="landmarks">
+                        <img src="https://images.unsplash.com/photo-1568322445389-f64ac2515020?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                            alt="Pyramids of Giza" class="w-full h-64 object-cover">
+                        <div class="gallery-overlay">
+                            <h3 class="text-white text-xl font-bold mb-2">Pyramids of Giza</h3>
+                            <p class="text-white text-sm">Cairo, Egypt</p>
+                            <p class="text-white text-xs mt-2">Landmark</p>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 2 -->
+                    <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-aos="fade-up"
+                        data-aos-delay="100" data-category="landmarks">
+                        <img src="https://images.unsplash.com/photo-1553913861-c0fddf2619ee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                            alt="Luxor Temple" class="w-full h-64 object-cover">
+                        <div class="gallery-overlay">
+                            <h3 class="text-white text-xl font-bold mb-2">Luxor Temple</h3>
+                            <p class="text-white text-sm">Luxor, Egypt</p>
+                            <p class="text-white text-xs mt-2">Landmark</p>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 3 -->
+                    <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-aos="fade-up"
+                        data-aos-delay="200" data-category="nature">
+                        <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                            alt="Red Sea" class="w-full h-64 object-cover">
+                        <div class="gallery-overlay">
+                            <h3 class="text-white text-xl font-bold mb-2">Red Sea Coral Reefs</h3>
+                            <p class="text-white text-sm">Hurghada, Egypt</p>
+                            <p class="text-white text-xs mt-2">Nature</p>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 4 -->
+                    <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-aos="fade-up"
+                        data-aos-delay="300" data-category="culture">
+                        <img src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                            alt="Cairo Market" class="w-full h-64 object-cover">
+                        <div class="gallery-overlay">
+                            <h3 class="text-white text-xl font-bold mb-2">Khan el-Khalili Bazaar</h3>
+                            <p class="text-white text-sm">Cairo, Egypt</p>
+                            <p class="text-white text-xs mt-2">Culture</p>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 5 -->
+                    <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-aos="fade-up"
+                        data-category="landmarks">
+                        <img src="https://images.unsplash.com/photo-1560860446-c821e910a0a7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                            alt="Abu Simbel" class="w-full h-64 object-cover">
+                        <div class="gallery-overlay">
+                            <h3 class="text-white text-xl font-bold mb-2">Abu Simbel Temples</h3>
+                            <p class="text-white text-sm">Aswan, Egypt</p>
+                            <p class="text-white text-xs mt-2">Landmark</p>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 6 -->
+                    <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-aos="fade-up"
+                        data-aos-delay="100" data-category="culture">
+                        <img src="https://images.unsplash.com/photo-1566192091743-5966a6079984?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                            alt="Egyptian Food" class="w-full h-64 object-cover">
+                        <div class="gallery-overlay">
+                            <h3 class="text-white text-xl font-bold mb-2">Traditional Egyptian Cuisine</h3>
+                            <p class="text-white text-sm">Various Locations</p>
+                            <p class="text-white text-xs mt-2">Culture</p>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 7 -->
+                    <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-aos="fade-up"
+                        data-aos-delay="200" data-category="adventure">
+                        <img src="https://images.unsplash.com/photo-1545167496-c1e5654a33ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                            alt="Desert Safari" class="w-full h-64 object-cover">
+                        <div class="gallery-overlay">
+                            <h3 class="text-white text-xl font-bold mb-2">Desert Safari</h3>
+                            <p class="text-white text-sm">Western Desert, Egypt</p>
+                            <p class="text-white text-xs mt-2">Adventure</p>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 8 -->
+                    <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-aos="fade-up"
+                        data-aos-delay="300" data-category="nature">
+                        <img src="https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                            alt="Nile River" class="w-full h-64 object-cover">
+                        <div class="gallery-overlay">
+                            <h3 class="text-white text-xl font-bold mb-2">Nile River Sunset</h3>
+                            <p class="text-white text-sm">Luxor, Egypt</p>
+                            <p class="text-white text-xs mt-2">Nature</p>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 9 -->
+                    <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-aos="fade-up"
+                        data-category="landmarks">
+                        <img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                            alt="Alexandria Library" class="w-full h-64 object-cover">
+                        <div class="gallery-overlay">
+                            <h3 class="text-white text-xl font-bold mb-2">Bibliotheca Alexandrina</h3>
+                            <p class="text-white text-sm">Alexandria, Egypt</p>
+                            <p class="text-white text-xs mt-2">Landmark</p>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 10 -->
+                    <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-aos="fade-up"
+                        data-aos-delay="100" data-category="adventure">
+                        <img src="https://images.unsplash.com/photo-1632944398987-494eebe663be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                            alt="Hot Air Balloon" class="w-full h-64 object-cover">
+                        <div class="gallery-overlay">
+                            <h3 class="text-white text-xl font-bold mb-2">Hot Air Balloon Ride</h3>
+                            <p class="text-white text-sm">Luxor, Egypt</p>
+                            <p class="text-white text-xs mt-2">Adventure</p>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 11 -->
+                    <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-aos="fade-up"
+                        data-aos-delay="200" data-category="culture">
+                        <img src="https://images.unsplash.com/photo-1599153866352-7b8a6a804a1c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                            alt="Egyptian Museum" class="w-full h-64 object-cover">
+                        <div class="gallery-overlay">
+                            <h3 class="text-white text-xl font-bold mb-2">Egyptian Museum</h3>
+                            <p class="text-white text-sm">Cairo, Egypt</p>
+                            <p class="text-white text-xs mt-2">Culture</p>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 12 -->
+                    <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-aos="fade-up"
+                        data-aos-delay="300" data-category="nature">
+                        <img src="https://images.unsplash.com/photo-1559628233-100c798642d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                            alt="White Desert" class="w-full h-64 object-cover">
+                        <div class="gallery-overlay">
+                            <h3 class="text-white text-xl font-bold mb-2">White Desert</h3>
+                            <p class="text-white text-sm">Western Desert, Egypt</p>
+                            <p class="text-white text-xs mt-2">Nature</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>WanderNile &copy; 2025</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="contact-info">
+                    <a href="mailto:info@wandernile.com"><i class="fas fa-envelope"></i> info@wandernile.com</a>
+                    <span> | </span>
+                    <a href="https://wa.me/1234567890"><i class="fab fa-whatsapp"></i> +1 (234) 567-890</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Gallery filtering functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+
+                    const filterValue = this.getAttribute('data-filter');
+
+                    galleryItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

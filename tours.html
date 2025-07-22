@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tours - WanderNile</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0e7490',
+                        secondary: '#0369a1',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">Wander<span>Nile</span></a>
+                <button class="nav-toggle">&#9776;</button>
+                <nav class="navbar">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="tours.html">Tours</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Tours Page Header -->
+        <section class="relative py-20 bg-cover bg-center text-white"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1539650116574-8efeb43e2750?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4" data-aos="fade-down">Explore Our Tours</h1>
+                <p class="text-xl max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    Discover the wonders of Egypt with our carefully crafted tour packages
+                </p>
+            </div>
+        </section>
+
+        <!-- Tours Filter Section -->
+        <section class="py-8 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap justify-center gap-4">
+                    <button
+                        class="bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition duration-300">All
+                        Tours</button>
+                    <button
+                        class="bg-white text-gray-700 px-6 py-2 rounded-full hover:bg-gray-200 transition duration-300">Cairo
+                        & Pyramids</button>
+                    <button
+                        class="bg-white text-gray-700 px-6 py-2 rounded-full hover:bg-gray-200 transition duration-300">Nile
+                        Cruises</button>
+                    <button
+                        class="bg-white text-gray-700 px-6 py-2 rounded-full hover:bg-gray-200 transition duration-300">Luxor
+                        & Aswan</button>
+                    <button
+                        class="bg-white text-gray-700 px-6 py-2 rounded-full hover:bg-gray-200 transition duration-300">Red
+                        Sea</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tours Grid -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Tour Card 1 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:transform hover:scale-105"
+                        data-aos="fade-up">
+                        <img src="https://images.unsplash.com/photo-1568322445389-f64ac2515020?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                            alt="Pyramids of Giza" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="bg-primary text-white text-sm py-1 px-3 rounded-full">5 Days</span>
+                                <span class="text-gray-600"><i class="fas fa-star text-yellow-400"></i> 4.9 (128)</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">Pyramids & Nile Cruise</h3>
+                            <p class="text-gray-600 mb-4">Explore the ancient pyramids and cruise along the legendary
+                                Nile River in this unforgettable journey through time.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-primary font-bold text-xl">$1,299</span>
+                                <a href="#"
+                                    class="bg-primary hover:bg-secondary text-white py-2 px-4 rounded transition duration-300">More
+                                    Info</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tour Card 2 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:transform hover:scale-105"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://images.unsplash.com/photo-1553913861-c0fddf2619ee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                            alt="Luxor Temple" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="bg-primary text-white text-sm py-1 px-3 rounded-full">7 Days</span>
+                                <span class="text-gray-600"><i class="fas fa-star text-yellow-400"></i> 4.8 (96)</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">Luxor & Valley of Kings</h3>
+                            <p class="text-gray-600 mb-4">Discover the ancient city of Luxor and the mysterious Valley
+                                of Kings with expert guides and luxury accommodations.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-primary font-bold text-xl">$1,799</span>
+                                <a href="#"
+                                    class="bg-primary hover:bg-secondary text-white py-2 px-4 rounded transition duration-300">More
+                                    Info</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tour Card 3 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:transform hover:scale-105"
+                        data-aos="fade-up" data-aos-delay="200">
+                        <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                            alt="Red Sea" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="bg-primary text-white text-sm py-1 px-3 rounded-full">4 Days</span>
+                                <span class="text-gray-600"><i class="fas fa-star text-yellow-400"></i> 4.7 (84)</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">Red Sea Retreat</h3>
+                            <p class="text-gray-600 mb-4">Relax on pristine beaches and dive into crystal clear waters
+                                to explore vibrant coral reefs in this coastal paradise.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-primary font-bold text-xl">$899</span>
+                                <a href="#"
+                                    class="bg-primary hover:bg-secondary text-white py-2 px-4 rounded transition duration-300">More
+                                    Info</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tour Card 4 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:transform hover:scale-105"
+                        data-aos="fade-up">
+                        <img src="https://images.unsplash.com/photo-1626688445658-c948f32d68d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                            alt="Cairo City Tour" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="bg-primary text-white text-sm py-1 px-3 rounded-full">3 Days</span>
+                                <span class="text-gray-600"><i class="fas fa-star text-yellow-400"></i> 4.6 (72)</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">Cairo City Explorer</h3>
+                            <p class="text-gray-600 mb-4">Experience the vibrant culture of Cairo with visits to
+                                historic sites, bustling markets, and authentic local cuisine.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-primary font-bold text-xl">$699</span>
+                                <a href="#"
+                                    class="bg-primary hover:bg-secondary text-white py-2 px-4 rounded transition duration-300">More
+                                    Info</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tour Card 5 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:transform hover:scale-105"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://images.unsplash.com/photo-1560860446-c821e910a0a7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                            alt="Abu Simbel" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="bg-primary text-white text-sm py-1 px-3 rounded-full">6 Days</span>
+                                <span class="text-gray-600"><i class="fas fa-star text-yellow-400"></i> 4.9 (64)</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">Aswan & Abu Simbel</h3>
+                            <p class="text-gray-600 mb-4">Journey to southern Egypt to witness the magnificent temples
+                                of Abu Simbel and the natural beauty of Aswan.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-primary font-bold text-xl">$1,499</span>
+                                <a href="#"
+                                    class="bg-primary hover:bg-secondary text-white py-2 px-4 rounded transition duration-300">More
+                                    Info</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tour Card 6 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:transform hover:scale-105"
+                        data-aos="fade-up" data-aos-delay="200">
+                        <img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                            alt="Alexandria" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="bg-primary text-white text-sm py-1 px-3 rounded-full">4 Days</span>
+                                <span class="text-gray-600"><i class="fas fa-star text-yellow-400"></i> 4.7 (56)</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">Alexandria & Mediterranean</h3>
+                            <p class="text-gray-600 mb-4">Explore the historic port city of Alexandria with its rich
+                                Greek and Roman heritage along the Mediterranean coast.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-primary font-bold text-xl">$999</span>
+                                <a href="#"
+                                    class="bg-primary hover:bg-secondary text-white py-2 px-4 rounded transition duration-300">More
+                                    Info</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold mb-6" data-aos="fade-up">Looking for a Custom Experience?</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto mb-8" data-aos="fade-up" data-aos-delay="100">
+                    We can create a personalized itinerary tailored to your interests, timeline, and budget. Contact our
+                    travel experts to start planning your dream Egyptian adventure.
+                </p>
+                <a href="contact.html"
+                    class="bg-primary hover:bg-secondary text-white font-bold py-3 px-8 rounded-full transition duration-300 inline-block"
+                    data-aos="zoom-in" data-aos-delay="200">Contact Us</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>WanderNile &copy; 2025</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="contact-info">
+                    <a href="mailto:info@wandernile.com"><i class="fas fa-envelope"></i> info@wandernile.com</a>
+                    <span> | </span>
+                    <a href="https://wa.me/1234567890"><i class="fab fa-whatsapp"></i> +1 (234) 567-890</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
